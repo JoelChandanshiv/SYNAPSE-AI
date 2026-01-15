@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  mautrix-whatsapp:
+    image: dock.mau.dev/mautrix/whatsapp:latest
+    container_name: mautrix-whatsapp
+    restart: unless-stopped
+    user: "0:0"
+    volumes:
+      - ./data:/data
+    networks:
+      - matrix
+networks:
+  matrix:
+    external: true

@@ -1,0 +1,60 @@
+# Databases
+*.db
+*.db-shm
+*.db-wal
+
+# Matrix runtime data
+matrix-synapse/data/
+mautrix-*/data/
+
+# Secrets
+*.yaml
+*.yml
+!docker-compose.yml
+!docker-compose.yaml
+
+# Logs
+*.log
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Python
+venv/
+venv311/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.cache/
+.pytest_cache/
+
+# Go
+bin/
+pkg/
+*.exe
+*.test
+
+# Matrix / Synapse
+homeserver.db
+*.log
+media_store/
+uploads/
+*.signing.key
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+
+# Build artifacts
+dist/
+build/
+
+# DuckDNS / secrets
+*.token
+*.key
+*.pem

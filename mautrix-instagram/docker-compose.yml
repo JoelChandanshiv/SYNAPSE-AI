@@ -1,0 +1,18 @@
+
+version: '3.7'
+
+services:
+  mautrix-instagram:
+    container_name: mautrix-instagram
+    image: dock.mau.dev/mautrix/instagram:latest
+    restart: unless-stopped
+    user: "0:0"
+    volumes:
+      - ./data:/data
+    networks:
+      - matrix
+
+networks:
+  matrix:
+    name: matrix
+    external: true

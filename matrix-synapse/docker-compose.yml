@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  synapse:
+    image: matrixdotorg/synapse:latest
+    container_name: synapse
+    restart: unless-stopped
+    ports:
+      - "8008:8008"
+      - "8448:8448"
+    volumes:
+      - ./data:/data
+    environment:
+      - SYNAPSE_SERVER_NAME=joeldc.duckdns.org
+      - SYNAPSE_REPORT_STATS=no
+    networks:
+      - matrix
+
+networks:
+  matrix:
+    name: matrix
+    driver: bridge
